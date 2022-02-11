@@ -1,7 +1,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
   package="com.virotestapp">
 
+    <queries>
+      <package android:name="com.google.ar.core" />
+    </queries>
+
+    <uses-sdk tools:overrideLibrary="com.viromedia.virobridge, com.viro.renderer"/>
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.ar" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" tools:replace="required"/>
 
     <application
       android:name=".MainApplication"
@@ -9,11 +21,14 @@
       android:icon="@mipmap/ic_launcher"
       android:roundIcon="@mipmap/ic_launcher_round"
       android:allowBackup="false"
+      android:exported="true"
       android:theme="@style/AppTheme">
+      <meta-data android:name="com.google.ar.core" android:value="optional" />
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
         android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+        android:exported="true"
         android:launchMode="singleTask"
         android:windowSoftInputMode="adjustResize">
         <intent-filter>
