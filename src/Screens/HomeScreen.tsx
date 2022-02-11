@@ -23,6 +23,11 @@ const buttons = [
     title: 'Portal',
     route: 'PORTAL',
   },
+  {
+    key: '5',
+    title: 'Partículas',
+    route: 'PARTICLES',
+  },
 ];
 
 const HomeScreen: React.FC = () => {
