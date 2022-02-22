@@ -1,6 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {Button, FlatList, Platform, StyleSheet, Text, View} from 'react-native';
+import {Button, FlatList, View} from 'react-native';
 
 const buttons = [
   {
@@ -27,6 +27,21 @@ const buttons = [
     key: '5',
     title: 'Partículas',
     route: 'PARTICLES',
+  },
+  {
+    key: '6',
+    title: 'Car',
+    route: 'CAR',
+  },
+  {
+    key: '7',
+    title: 'Marcadores',
+    route: 'MARKER',
+  },
+  {
+    key: '8',
+    title: 'Iconos',
+    route: 'ICONS',
   },
 ];
 

@@ -7,6 +7,9 @@ import GalleryScreen from '@src/Screens/GalleryScreen';
 import PortalScreen from '@src/Features/Portal/PortalsScreen';
 import TourSceen from '@src/Features/360PhotoTour/TourScreen';
 import ParticlesScreen from '@src/Features/ParticleEmitters/ParticlesScreen';
+import CarSceen from '@src/Screens/ImageScreen';
+import MarkerScreen from '@src/Screens/MarkerScreen';
+import IconsScreen from '@src/Screens/IconsScreen';
 
 const AppStack = createNativeStackNavigator();
 
@@ -20,6 +23,9 @@ const AppNavigator: React.FC = () => {
       <AppStack.Screen name="360TOUR" component={TourSceen} />
       <AppStack.Screen name="PORTAL" component={PortalScreen} />
       <AppStack.Screen name="PARTICLES" component={ParticlesScreen} />
+      <AppStack.Screen name="CAR" component={CarSceen} />
+      <AppStack.Screen name="MARKER" component={MarkerScreen} />
+      <AppStack.Screen name="ICONS" component={IconsScreen} />
     </AppStack.Navigator>
   );
 };
